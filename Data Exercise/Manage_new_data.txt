@@ -1,0 +1,9 @@
+What happens when new data comes in?
+
+Ideally, the inital run should load the de-accumulated data into a SQL table.
+
+In that case when new data comes in, the program reads the input, do the required processing and appends the newly de-accumulated data into the previously created SQL table. 
+
+Constraints
+The source data should be standardised to match the format in the current csv file with the first column containing the epochs and the second column having the running-total of the measurement. If the data source is a csv file, it should have UTF-8 encoding.
+The value should be rounded off to a maximum of 2 decimal places.

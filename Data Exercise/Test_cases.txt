@@ -1,0 +1,56 @@
+<<Test Case 1>>
+What? - To test the date time range outside the available data
+At the prompt, enter the following
+Input the From time in the format YYYY-MM-DD HH:MM : 2014-05-03 02:00
+Input the To time in the format YYYY-MM-DD HH:MM : 2014-05-03 15:00
+
+Expected result
+Data not available for this time range
+-----------------------------------------------------------------------------------------------------------------------------
+
+<<Test Case 2>>
+What? - To test the date time range within the available data, but when rainfall measurement is 0
+At the prompt, enter the following
+Input the From time in the format YYYY-MM-DD HH:MM : 2014-05-03 02:00
+Input the To time in the format YYYY-MM-DD HH:MM : 2014-05-03 15:00
+
+Expected result
+Data not available for this time range
+
+Note - In this scenario, the expected result could vary because the rainfall measurement is randomly assigned within the time intervals
+------------------------------------------------------------------------------------------------------------------------------
+
+<<Test Case 3>>
+What? - To test the date time range within the available data and rainfall measurement is greater than 0
+At the prompt, enter the following
+Input the From time in the format YYYY-MM-DD HH:MM : 2016-04-24 13:00
+Input the To time in the format YYYY-MM-DD HH:MM : 2016-04-29 13:00
+
+Expected result
+Peak 30 minute period is between 12:00 and 12:30 on 2016-04-27
+Measured rainfall:  0.16 inches
+
+Note - In this scenario, the expected result could vary because the rainfall measurement is randomly assigned within the time intervals
+------------------------------------------------------------------------------------------------------------------------------
+
+<<Test Case 4>>
+What? - To verify that the sum of rainfall measurement equals to the running total in the source file
+Open the destination file (csv) and calculate the sum of all rainfall measurement between observation times in the source file. 
+Row 1 in source file contains the following column values
+Unixdatetime - 1452211200 (equivalent to 07 Jan 2016 20:00 EST)
+value - 0.23
+
+Expected result
+In the destination file, the sum of rainfall measurement between 2016-01-07 18:00:00 and 2016-01-07 20:00:00 should be 0.23
+-------------------------------------------------------------------------------------------------------------------------------
+
+<<Test Case 5>>
+What? - To verify that the sum of rainfall measurement equals to the running total in the source file
+Open the destination file (csv) and calculate the sum of all rainfall measurement between observation times in the source file. 
+Row 19 in source file contains the following column values
+Unixdatetime - 1456876800 (equivalent to 01 Mar 2016 20:00 EST)
+value - 0.1
+
+Expected result
+In the destination file, the sum of rainfall measurement between 2016-02-29 20:00:00 and 2016-03-01 20:00:00 should be 0.1
+--------------------------------------------------------------------------------------------------------------------------------

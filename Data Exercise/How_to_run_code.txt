@@ -1,0 +1,8 @@
+To build and run the code
+- Set the source file path and file name
+- Set the destination file path and file name to store the de-accumulated data
+- Use a Python IDE to build and run the code
+- To find the peak 30-minute period enter Y when prompted
+- Enter the from and to values of the time range in the specified format
+- The peak 30 minute period will be displayed if available
+- The de-accumulated data will be saved to a csv file in the specified location
